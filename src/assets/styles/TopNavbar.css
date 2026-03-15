@@ -1,0 +1,93 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Top Navbar Styles */
+  .top-navbar {
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .top-navbar-left {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .top-navbar-back-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  
+  .top-navbar-icon-and-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .top-navbar-brand-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    padding-left: 5px;
+  }
+  
+  .top-navbar-brand-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .top-navbar-right {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .top-navbar-user-username {
+    margin-right: 10px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .top-navbar-login-button {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+  }
+
+  .top-navbar-user-icon {
+    margin-right: 10px;
+    background: none;
+    height: 20px;
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    padding-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .navbar-bottom{
+    margin-bottom: 60px;
+  }

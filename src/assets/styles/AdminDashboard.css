@@ -1,0 +1,1004 @@
+/* AdminPanel.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Set the background to white */
+  color: #000; /* Set text color to black */
+}
+
+.icon{
+  height: 50px;
+  width: 50px;
+}
+
+.admin-panel-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 100px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 800px; /* Set a maximum width for the card container */
+  margin: 0 auto; /* Center the card container */
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: calc(50% - 20px); /* Two cards in a row with some margin */
+  box-sizing: border-box; /* Include padding in the width */
+
+  color: black;
+  text-decoration: none;
+}
+
+.product-dashboard-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: calc(33.33% - 10px); 
+  box-sizing: border-box;
+
+  min-height: 5px;
+
+  color: black;
+  text-decoration: none;
+
+  font-size: small;
+}
+
+.product-category-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: calc(50% - 10px); 
+  box-sizing: border-box;
+
+  min-height: 5px;
+
+  color: black;
+  text-decoration: none;
+
+  font-size: small;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;  
+}
+
+.product-dashboard-container {
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack children vertically on small screens */
+}
+
+.product-dashboard-first-row,
+.product-dashboard-second-row,
+.product-dashboard-product-table {
+  width: 100%; /* Take up full width */
+}
+
+
+.product-dashboard-first-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 10px; /* Add some spacing between items */
+  margin: 0 auto; /* Center the container */
+}
+
+
+.product-dashboard-second-row {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 600;
+}
+.product-dashboard-product-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-dashboard-product-table th, .product-dashboard-product-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.product-dashboard-product-table th {
+  background-color: #f2f2f2;
+}
+
+.product-dashboard-product-table img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 500px) {
+  
+  .product-dashboard-product-table img {
+    max-width: 30px; /* Adjust image size for smaller screens */
+    max-height: 30px;
+  }
+  .product-dashboard-product-table{
+    font-size: 6px;
+  }
+}
+
+.product-category-manager-container {
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0, 0,1);
+  background-color: white;
+}
+
+.product-category-edit-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.product-category-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  margin-top:10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-category-image img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.product-category-details {
+  flex-grow: 1;
+}
+
+.product-category-details h3 {
+  font-size: 1.5rem;
+}
+
+.product-category-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+}
+
+.product-category-buttons button {
+  background-color: #EA3837;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 2s ease;
+
+  &:hover {
+    background-color: #217dbb;
+  }
+
+  & + button {
+    margin-top: 5px;
+  }
+}
+
+.product-category-form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product-category-form-row label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.product-category-form-row input,
+.product-category-form-row textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.product-category-image-upload {
+  position: relative;
+  width: 300px;
+  height: 180px;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-category-image-upload img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-category-image-upload input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.product-category-image-upload i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.product-category-image-upload p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.product-category-form-row input[type="checkbox"] {
+  margin-top: 8px;
+}
+
+.product-category-image-upload-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.product-category-image-upload-overlay i {
+  font-size: 24px;
+  margin-bottom: 8px;
+  opacity: 1;
+}
+
+.product-category-image-upload-overlay p {
+  margin: 0;
+  opacity: 1;
+}
+
+.product-category-image-upload-overlay input {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.loading-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(155, 145, 145, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-popup{
+  background-color: transparent;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.pl {
+	display: block;
+	width: 6.25em;
+	height: 6.25em;
+}
+.pl__ring, .pl__ball {
+	animation: ring 2s ease-out infinite;
+}
+.pl__ball {
+	animation-name: ball;
+}
+
+/* Animation */
+@keyframes ring {
+	from {
+		stroke-dasharray: 0 257 0 0 1 0 0 258;
+	}
+	25% {
+		stroke-dasharray: 0 0 0 0 257 0 258 0;
+	}
+	50%, to {
+		stroke-dasharray: 0 0 0 0 0 515 0 0;
+	}
+}
+@keyframes ball {
+	from, 50% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: 1;
+	}
+	64% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -109;
+	}
+	78% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -145;
+	}
+	92% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -157;
+	}
+	57%, 71%, 85%, 99%, to {
+		animation-timing-function: ease-out;
+		stroke-dashoffset: -163;
+	}
+}
+
+.product-size-chart-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-size-chart-row > div {
+  flex: 1;
+}
+
+.product-size-chart-row > div:nth-child(2) {
+  margin-right: 10px;
+}
+
+.product-size-chart-details {
+  font-size: 1.2em;
+}
+
+.product-size-chart-table {
+  flex: 1;
+}
+
+.product-size-chart-table table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-size-chart-table th,
+.product-size-chart-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.product-size-chart-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.product-size-chart-table input {
+  width: 50px;
+  text-align: center;
+}
+
+
+.size-chart-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; 
+}
+
+.size-chart-buttons button {
+  background-color: #EA3837;
+  color: #fff;
+  padding: 7px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 2s ease;
+
+  &:hover {
+    background-color: #217dbb;
+  }
+
+  & + button {
+    margin-top: 2px;
+  }
+}
+
+
+.product-size-chart-form-row label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.product-size-chart-form-row input,
+.product-size-chart-form-row textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.order-management-container {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+.order-management-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.order-management-filter-input, .order-management-filter-select, .order-management-action-input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 80px;
+}
+
+.order-management-filter-button {
+  padding: 10px 20px;
+  background-color: #ff0062;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 200px;
+} 
+.order-management-action-button {
+  padding: 10px 20px;
+  background-color: #ff0062;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-management-filter-button:hover, .order-management-action-button:hover {
+  background-color: #0056b3;
+}
+
+.order-management-status-actions {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.order-management-status-action-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.order-management-status-action-button {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.admin-order-dashboard-filter-selected{
+  background-color: #ff0062;
+}
+
+.order-management-status-action-button:last-child {
+  margin-right: 0;
+}
+
+.order-management-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-management-action-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-management-input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-management-action {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.order-management-action:last-child {
+  margin-right: 0;
+}
+
+.order-management-action:hover {
+  background-color: #f0f0f0;
+}
+
+.order-management-table-container {
+  max-height: calc(48px * 10); /* 48px is assumed as the height of a row, adjust as needed */
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 40px;
+
+  /* Added to allow the container to behave as a block element */
+  position: relative;
+}
+
+.order-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-management-table thead {
+  background-color: #ff0062;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensures the header stays on top */
+}
+
+.order-management-table th,
+.order-management-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.order-management-table tbody tr:nth-child(even) {
+  background-color: #e2e2e2;
+}
+
+
+.review-management-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  width: 100%;  /* Ensure the card takes up 100% of the parent container */
+  max-width: 600px;
+  box-sizing: border-box;  /* Include padding and border in width calculation */
+}
+
+.review-management-header {
+  display: flex;
+  align-items: center;
+}
+
+.review-management-profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.review-management-reviewer-info {
+  flex: 1;
+}
+
+.review-management-reviewer-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;  /* Ensure the name is left-aligned */
+}
+
+.review-management-review-body {
+  display: flex;
+  justify-content: space-between;  /* Space between rating and date */
+  align-items: center;
+  margin-top: 4px;
+}
+
+.review-management-review-rating {
+  color: #FFD700; /* Gold color for stars */
+}
+
+.review-management-review-date {
+  font-size: 12px;
+  color: gray;
+}
+
+.review-management-review-text {
+  margin-top: 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+
+/* Style the date input field */
+.react-datepicker-wrapper {
+  min-width: 80px;
+  max-width: 130px;
+  margin-right: 30px;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease-in-out;
+}
+
+.react-datepicker__input-container input:focus {
+  border: 1px solid #ff0062;
+  outline: none;
+}
+
+/* Style the calendar popup */
+.react-datepicker {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+}
+
+/* Header (Month and Year) */
+.react-datepicker__header {
+  background-color: #ff0062;
+  color: white;
+  border-bottom: none;
+  padding-top: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Days of the week */
+.react-datepicker__day-names {
+  color: #333;
+}
+
+/* Individual day numbers */
+.react-datepicker__day {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 2px;
+  border-radius: 8px;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect on days */
+.react-datepicker__day:hover {
+  background-color: #ff0062;
+  color: white;
+}
+
+/* Selected day */
+.react-datepicker__day--selected {
+  background-color: #ff0062;
+  color: white;
+}
+
+/* Today’s date */
+.react-datepicker__day--today {
+  font-weight: bold;
+  border: 1px solid #ff0062;
+}
+
+/* Disabled days */
+.react-datepicker__day--disabled {
+  color: #ccc;
+  pointer-events: none;
+}
+
+/* Clear button */
+.react-datepicker__close-icon::after {
+  background-color: #ff0062;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+
+
+/* Tracking URL Section */
+.admin-order-details-tracking-url-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.admin-order-details-tracking-url-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-order-details-add-btn {
+  background-color: rgb(223, 1, 112);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.7em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-order-details-add-btn:hover {
+  opacity: 0.9;
+}
+
+/* Order Status Update Section */
+.admin-order-details-status-update-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.admin-order-details-status-dropdown {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Admin Notes Section */
+.admin-order-details-admin-notes-section {
+  margin-top: 20px;
+}
+
+.admin-order-details-notes-display {
+  margin-bottom: 15px;
+}
+
+.admin-order-details-note {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-order-details-note-message {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.admin-order-details-note-meta {
+  font-size: 12px;
+  color: #666;
+}
+
+.admin-order-details-note-meta .note-time {
+  margin-right: 10px;
+}
+
+.admin-order-details-add-note-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.admin-order-details-note-textbox {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  height: 60px;
+  resize: none;
+}
+
+.admin-order-dashboard-overall-statistics-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.admin-order-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-order-dashboard-header h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.admin-order-dashboard-date-range {
+  color: #555;
+  font-size: 14px;
+}
+
+.admin-order-dashboard-see-all-link {
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.admin-order-dashboard-see-all-link:hover {
+  text-decoration: underline;
+}
+
+.admin-order-dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-order-dashboard-total-value-section {
+  flex: 1;
+}
+
+.admin-order-dashboard-circle-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.admin-order-dashboard-circle .admin-order-dashboard-value {
+  position: absolute;
+  text-align: center;
+}
+
+.admin-order-dashboard-circle .admin-order-dashboard-value .admin-order-dashboard-currency {
+  font-size: 14px;
+  color: #333;
+}
+
+.admin-order-dashboard-circle .admin-order-dashboard-value .admin-order-dashboard-amount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.admin-order-dashboard-circle .admin-order-dashboard-orders {
+  position: absolute;
+  bottom: -20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.admin-order-dashboard-details-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-order-dashboard-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-order-dashboard-detail .admin-order-dashboard-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.admin-order-dashboard-detail .admin-order-dashboard-percentage {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.admin-order-dashboard-detail .admin-order-dashboard-orders-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.admin-order-dashboard-detail .admin-order-dashboard-processing-info {
+  font-size: 12px;
+  color: #999;
+}
+
+.admin-order-dashboard-detail.delivered .admin-order-dashboard-percentage {
+  color: #28a745;
+}
+
+.admin-order-dashboard-detail.processing .admin-order-dashboard-percentage {
+  color: #ffc107;
+}
+
+.admin-order-dashboard-detail.returned .admin-order-dashboard-percentage {
+  color: #dc3545;
+}

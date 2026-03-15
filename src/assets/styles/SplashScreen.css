@@ -1,0 +1,32 @@
+.splash-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /*background-color: #05B9FC;*/
+    /*background-color: #FF383A;*/
+    /* background-color: #7900DB; */
+    background-color: rgb(0, 0, 0);
+    /*background-color: #FF217D;*/
+    color: #fff;
+
+    /* background: linear-gradient(to bottom, #462542, #af5f6c, #e96b55, #fdc153, #46b39b); */
+    /* background: linear-gradient(to bottom, #0cda65, #0cda65, #fdc153);
+    color: #020067; */
+  }
+  
+  .logo-container {
+    text-align: center;
+    transform: translate(0%, -10%);
+  }
+  
+  .logo {
+    max-width: 70%;
+    height: auto;
+  }
+  
+  .slogan {
+    font-weight:550;
+    font-size: 20px;
+    margin-top: 10px;
+  }
