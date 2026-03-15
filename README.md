@@ -1,188 +1,105 @@
-# FabriCraft
+# Cigar Cloud UI - Case Study
 
-**Crafting satisfaction in every stitch — timeless elegance and comfort.**
+### Live Site
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success?style=flat-square)](https://fabricraft.netlify.app/)
+https://cigar-cloud.netlify.app/
 
-FabriCraft is a modern, full-featured e-commerce web application for premium clothing. Built with React, it offers a smooth shopping experience with product browsing, wishlist, cart, checkout, order tracking, and an admin panel for store management.
-
----
-
-## Live Site
-
-**https://fabricraft.netlify.app/**
+![Cigar Cloud live site screenshot](https://image.thum.io/get/width/1280/https://cigar-cloud.netlify.app/)
 
 ---
+
+A modern, responsive Next.js application showcasing the Cigar Cloud case study with advanced animations, dark mode support, and a beautiful gradient-based UI.
 
 ## Features
 
-### Customer-facing
+- ✨ **Light & Dark Mode** - Seamless theme switching with system preference detection
+- 📱 **Mobile Responsive** - Fully optimized for all device sizes
+- 🎨 **Modern UI** - Beautiful gradient backgrounds and highlighted gradient text
+- 🎬 **Advanced Animations** - Smooth scroll animations and micro-interactions using Framer Motion
+- 🌈 **Gradient Design** - Stunning gradient backgrounds and text effects
+- ⚡ **Performance** - Optimized with Next.js 14 App Router
 
-| Feature | Description |
-|--------|-------------|
-| **Home** | Hero, category highlights, and featured products |
-| **Shop** | Browse all products with optional query filters |
-| **Categories** | Category listing and category-specific product pages |
-| **Product page** | Product details, images, reviews, add to cart/wishlist |
-| **Search** | Full search across products |
-| **Wishlist** | Save items for later (persisted in localStorage) |
-| **Cart** | Cart management and quantity updates |
-| **Checkout** | Delivery details, checkout flow, and order confirmation |
-| **Order success** | Confirmation screen after placing an order |
-| **Order history** | View past orders and order details |
-| **Profile** | User profile and account-related actions |
-| **Offers** | Promotional offers and deals |
-| **Auth** | Login/registration (Firebase-backed where configured) |
+## Tech Stack
 
-### Admin panel
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **next-themes** - Theme management
 
-- **Dashboard** — Overview and quick actions  
-- **Product management** — Add, edit, and manage products  
-- **Order management** — View and manage orders; order details view  
-- **Review management** — Moderate product reviews  
-- **Search management** — Admin search tools  
+## Getting Started
 
-Protected under a dedicated admin path and secret (see [Environment variables](#environment-variables)).
-
-### Technical highlights
-
-- **Firebase** — Firestore, Storage, Analytics  
-- **Backend API** — REST API for products, orders, and auth (see `REACT_APP_BACKEND_SERVER`)  
-- **Email** — Transactional/contact emails via EmailJS  
-- **Analytics** — Meta Pixel (Facebook) for events and page views  
-- **PWA-ready** — `manifest.json` and app-like experience  
-- **Responsive** — Mobile-first layout with bottom nav on small screens  
-
----
-
-## Tech stack
-
-| Layer | Technologies |
-|-------|----------------|
-| **UI** | React 18, React Router v6, React Bootstrap, Bootstrap 5 |
-| **State & data** | React Context (Auth, Data), TanStack React Query, Axios |
-| **Forms & validation** | React Hook Form, Yup, @hookform/resolvers |
-| **Backend / services** | Firebase (Firestore, Storage, Analytics), custom REST API |
-| **Email** | EmailJS (browser) |
-| **Utilities** | date-fns, crypto-js, BlurHash (react-blurhash), Font Awesome |
-| **Build** | Create React App (react-scripts) |
-
----
-
-## Project structure (high-level)
-
-```
-OnlyReactEcom/
-├── public/                 # Static assets, manifest, favicon
-├── src/
-│   ├── assets/             # Images, styles (CSS)
-│   ├── components/         # Pages & UI components (Home, Cart, Admin, etc.)
-│   ├── contexts/           # AuthContext, DataContext
-│   ├── containers/         # PrivateOutlet, AdminOutlet (route guards)
-│   ├── utils/              # Helpers, Meta Pixel, common utils
-│   ├── App.js              # Routes and app shell
-│   ├── firebaseConfig.js   # Firebase init and exports
-│   └── index.js
-├── env.example             # Template for environment variables
-├── package.json
-└── README.md
-```
-
----
-
-## Prerequisites
-
-- **Node.js** 16+ (recommended: 18 or 20)
-- **npm** or **yarn**
-
----
-
-## Getting started
-
-### 1. Clone and install
+### Installation
 
 ```bash
-git clone <repository-url>
-cd OnlyReactEcom
 npm install
 ```
 
-### 2. Environment variables
-
-Copy the example env file and fill in your values:
+### Development
 
 ```bash
-cp env.example .env
+npm run dev
 ```
 
-Edit `.env` with your actual keys and URLs. **Do not commit `.env`** (it should be in `.gitignore`).
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-| Variable | Purpose |
-|----------|--------|
-| `REACT_APP_FIREBASE_*` | Firebase project (API key, auth domain, project ID, storage, messaging, app ID, measurement ID) |
-| `REACT_APP_BACKEND_SERVER` | Base URL of your backend API (e.g. `https://your-api.com/api/`) |
-| `REACT_APP_ADMIN_PANEL_PATH` | URL path for admin panel (e.g. `/fabricraft-super-admin-panel/`) |
-| `REACT_APP_ADMIN_SECRET` / `REACT_APP_ADMIN_SUPER_SECRET` | Admin access secrets |
-| `REACT_APP_EMAILJS_PUBLIC_KEY` | EmailJS public key |
-| `REACT_APP_EMAILJS_SERVICE_ID` | EmailJS service ID |
-| `REACT_APP_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
-
-### 3. Run locally
-
-```bash
-npm start
-```
-
-App runs at **http://localhost:3000**.
-
-### 4. Build for production
+### Build
 
 ```bash
 npm run build
+npm start
 ```
 
-Output is in the `build/` folder, ready to deploy (e.g. to Netlify).
+## Project Structure
 
----
+```
+cigar-cloud-ui/
+├── app/
+│   ├── layout.tsx      # Root layout with theme provider
+│   ├── page.tsx        # Main case study page
+│   └── globals.css     # Global styles and utilities
+├── components/
+│   ├── ThemeProvider.tsx   # Theme context provider
+│   ├── ThemeToggle.tsx     # Dark mode toggle button
+│   └── ScrollAnimation.tsx # Scroll animation wrapper
+└── public/             # Static assets
+```
 
-## Available scripts
+## Features Breakdown
 
-| Command | Description |
-|---------|-------------|
-| `npm start` | Start development server (port 3000) |
-| `npm run build` | Production build into `build/` |
-| `npm test` | Run tests in watch mode |
-| `npm run eject` | Eject from Create React App (one-way; not recommended unless needed) |
+### Dark Mode
+- Toggle button in the top-right corner
+- Respects system preferences
+- Smooth transitions between themes
 
----
+### Animations
+- Scroll-triggered animations using Intersection Observer
+- Hover effects on interactive elements
+- Smooth page transitions
+- Staggered animations for lists
 
-## Deployment (Netlify)
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px)
+- Flexible grid layouts
+- Adaptive typography
 
-The project is deployed at **https://fabricraft.netlify.app/**.
+### Gradient Effects
+- Gradient text for headings
+- Gradient backgrounds for sections
+- Animated gradient overlays
 
-- **Build command:** `npm run build`  
-- **Publish directory:** `build`  
-- **Environment variables:** Set all `REACT_APP_*` (and any other required vars) in the Netlify dashboard under **Site settings → Environment variables**.
+## Customization
 
-For local builds, ensure `.env` is populated; for CI/Netlify, use the dashboard or linked repo env config.
+### Colors
+Edit `tailwind.config.ts` to customize the color scheme.
 
----
+### Animations
+Modify `components/ScrollAnimation.tsx` to adjust animation behavior.
 
-## Browser support
-
-Aligned with Create React App defaults: modern evergreen browsers (Chrome, Firefox, Safari, Edge). Production targets: `>0.2%`, not dead, not op_mini all.
-
----
+### Theme
+Update `app/globals.css` for custom gradient definitions.
 
 ## License
 
-This project is private. All rights reserved.
-
----
-
-## Acknowledgments
-
-- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
-- UI: [React Bootstrap](https://react-bootstrap.github.io/), [Bootstrap](https://getbootstrap.com/)
-- Icons: [Font Awesome](https://fontawesome.com/)
-- Fonts: [Google Fonts — Roboto](https://fonts.google.com/specimen/Roboto)
+This project is created for demonstration purposes.
