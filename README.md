@@ -4,7 +4,7 @@
 
 https://cigar-cloud.netlify.app/
 
-![Cigar Cloud live site screenshot](https://image.thum.io/get/width/1280/https://cigar-cloud.netlify.app/)
+<img src="https://image.thum.io/get/width/800/https://cigar-cloud.netlify.app/" alt="Cigar Cloud live site screenshot" width="800" height="500" />
 
 ---
 
