@@ -2,7 +2,8 @@
 
 **Crafting satisfaction in every stitch — timeless elegance and comfort.**
 
-**Live site:** [https://fabricraft.netlify.app/](https://fabricraft.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=flat-square)](https://fabricraft.netlify.app/)
+[https://fabricraft.netlify.app/](https://fabricraft.netlify.app/)
 
 FabriCraft is a modern, full-featured e-commerce web application for premium clothing. Built with React, it offers a smooth shopping experience with product browsing, wishlist, cart, checkout, order tracking, and an admin panel for store management.
 
